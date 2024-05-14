@@ -1,6 +1,5 @@
 import sys
 args=sys.argv
-
 #給料の入力
 salary=float(args[1]) 
 #税率・基準額の設定
@@ -20,7 +19,7 @@ else:
     pay_amount=salary-tax_amount
 
 #税額・支給額の四捨五入
-round_tax=int(round(tax_amount))
-round_pay=int(round(pay_amount))
+round_tax=str(int(round(tax_amount)))
+round_pay=str(int(round(pay_amount)))
 #税額・支給額の出力
 print("支給額:"+round_pay+"、"+"税額:"+round_tax,end="")
