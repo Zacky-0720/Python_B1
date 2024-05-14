@@ -2,21 +2,17 @@ import sys
 
 args = sys.argv
 
-base_salary = int(args[1])
+input_salary = int(args[1])
 threshold = 1000000
 
-salary = base_salary
+base_salary = min(input_salary, threshold)
+extra_salary = max(0, input_salary - threshold)
 
-extra_salary = 0
-if salary > threshold:
-    extra_salary = salary - threshold
-    salary = threshold
-
-salary_tax_amount = salary * 0.1
+salary_tax_amount = base_salary * 0.1
 extra_tax_amount = extra_salary * 0.2
 
 tax_amount_sum = salary_tax_amount + extra_tax_amount
 
-pay_amount = base_salary - tax_amount_sum
+pay_amount = input_salary - tax_amount_sum
 
 print(f"支給額:{int(pay_amount)}、税額:{int(tax_amount_sum)}", end="")
