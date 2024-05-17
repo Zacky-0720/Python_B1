@@ -18,5 +18,5 @@ dict = {
 try:
     distance = abs(dict[station_to] - dict[station_from])
     print(round(distance, 2), end="")
-except:
+except KeyError:
     print("のぞみの停車駅を引数に設定してください", end="")
