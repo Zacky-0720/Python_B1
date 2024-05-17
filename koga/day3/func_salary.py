@@ -21,4 +21,4 @@ def calcsalary(gal):
     round_tax=str(int(round(tax_amount)))
     round_pay=str(int(round(pay_amount)))
     #税額・支給額の出力
-    return("支給額:"+round_pay","+"税額:"round_tax)
+    return(round_pay,round_tax)
