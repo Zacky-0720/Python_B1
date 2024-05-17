@@ -3,8 +3,10 @@ args=sys.argv
 
 #曜日判定の関数
 def weekly(date):
+    #入力数値を日と月に分割(日は整数型、月は文字列)
     month=date[4:6]
     day=int(date[6:8])
+    #各月のパターン別に日付を算出
     if(month=="01"):
         sum_date=day
     if(month=="02"):
@@ -29,13 +31,13 @@ def weekly(date):
         sum_date=304+day
     if(month=="12"):
         sum_date=334+day
-
+    #７で割った余りを利用して曜日区分を導出
     if(sum_date%7==1 or sum_date%7==2):
         return(True)
-    if(sum_date%7!=1 and sum_date%7!=2):
+    else:
         return(False)
 
-#日付に応じて曜日を出力(True=休日、False=平日)
+#第一引数に応じて曜日区分を出力(True=休日、False=平日)
 V=weekly(args[1])
 
 #曜日ごとの値段表(辞書型)
