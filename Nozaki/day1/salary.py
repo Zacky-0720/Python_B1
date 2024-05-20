@@ -1,17 +1,14 @@
 import sys
-args = sys.argv
 
-Paid = int(args[1])
+Paid = int(sys.argv[1])
 
-if Paid >= 1000000:
-    tax_rate = 0.2
-
+if Paid > 1000000:
+    tax_rate =  int(1000000 * 0.1) + int(Paid - 1000000) * 0.2
 else:
-    tax_rate = 0.1
-    
-tax_amount = round(Paid * tax_rate)
+    tax_rate = int(Paid * 0.1)
 
-net_salary = Paid - tax_amount
+tax = round(tax_rate)
 
-print(net_salary)
-print(tax_amount)
+salary = Paid - tax
+
+print(f"支給額:{salary}、税額:{tax}", end="")
