@@ -28,6 +28,5 @@ else:
     else:      
         pay = 2400 * adult + 1500 * child
 
-
 #合計金額の出力
 print(pay, end="")
