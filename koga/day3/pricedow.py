@@ -2,7 +2,7 @@ import sys
 args = sys.argv
 
 #引数を変数に代入
-hm_class = args[1]              #値下げ対象の種別
+hm_class = args[1]          #値下げ対象の種別
 price_down = int(args[2])   #値下げ額
 
 #品目（品名と価格）を辞書型で定義
