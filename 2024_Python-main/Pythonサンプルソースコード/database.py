@@ -1,3 +1,4 @@
+#関連するモジュールの読み込み(*=任意の文字、全部)
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.ext.declarative import declarative_base
@@ -8,7 +9,7 @@ DATABASE = "mysql+pymysql://{user}:{password}@{host}/{database}?charset=utf8".fo
         "user": os.getenv("DB_USER", "root"),
         "password": os.getenv("DB_PASSWORD", "mysql"),
         "host": os.getenv("DB_HOST", "localhost"),
-        "database":os.getenv("DB_DATABESE", "enshu")
+        "database":os.getenv("DB_DATABESE", "ENSHU")
     })
 
 ENGINE = create_engine(
