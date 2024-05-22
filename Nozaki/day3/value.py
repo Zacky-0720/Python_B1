@@ -1,5 +1,6 @@
-# 第2引数を受け取る
+# 第1引数を受け取る
 import sys  
+# 第2引数を受け取る
 hm_class = sys.argv[1] 
 
 # 第3引数を受け取る 
@@ -24,7 +25,7 @@ elif(hm_class == "酒類"):
 else:
     change = noodls
 
-print(change)
+# print(change)
 
 for i in change:
     if((hinmoku[i] - price_down) <= 1):
